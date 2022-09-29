@@ -48,4 +48,7 @@ kubectl get all
 # Now destroy one of the pods - k8s will launch one more pod to match the number of desired replicas
 kubectl delete pod pod/web-5rssf
 
+# destroy the replicasets with this command
+kubectl delete replicasets.apps web
+
 ```
