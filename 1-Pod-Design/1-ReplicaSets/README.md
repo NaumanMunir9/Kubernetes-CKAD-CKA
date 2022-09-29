@@ -36,7 +36,6 @@
 ## Commands
 
 ```shell
-
 kubectl apply -f rs-1.yaml
 
 # get pods
@@ -60,5 +59,5 @@ kubectl delete pod pod/web-5rssf
 
 # destroy the replicasets with this command
 kubectl delete replicasets.apps web
-
+k delete replicasets.apps web-replicaset
 ```
