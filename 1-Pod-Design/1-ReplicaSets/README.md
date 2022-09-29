@@ -22,3 +22,13 @@
 - Therefore, it is recommended to use Deployments instead of directly using ReplicaSets, unless you require custom update orchestration or don't require updates at all.
 
 - This actually means that you may never need to manipulate ReplicaSet objects: use a Deployment instead, and define your application in the spec section.
+
+## Desired State and Current State
+
+### Desired State
+
+- The state of pods which is desired.
+
+### Current State
+
+- The actual state of pods which are running.
