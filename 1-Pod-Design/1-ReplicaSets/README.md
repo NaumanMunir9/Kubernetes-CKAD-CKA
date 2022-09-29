@@ -32,3 +32,20 @@
 ### Current State
 
 - The actual state of pods which are running.
+
+## Commands
+
+```shell
+
+kubectl apply -f rs-1.yaml
+
+kubectl get pods
+kubectl get rs
+
+# we can also invoke kube-apiserver thought the below command:
+kubectl get all
+
+# Now destroy one of the pods - k8s will launch one more pod to match the number of desired replicas
+kubectl delete pod pod/web-5rssf
+
+```
