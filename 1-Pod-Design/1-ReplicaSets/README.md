@@ -14,3 +14,11 @@
 
 - A ReplicaSet identifies new Pods to acquire by using its selector.
 - If there is a Pod that has no OwnerReference or the OwnerReference is not a Controller and it matches a ReplicaSet's selector, it will be immediately acquired by said ReplicaSet.
+
+## When to use a ReplicaSet
+
+- A ReplicaSet ensures that a specified number of pod replicas are running at any given time.
+- However, a Deployment is a higher-level concept that manages ReplicaSets and provides declarative updates to Pods along with a lot of other useful features.
+- Therefore, it is recommended to use Deployments instead of directly using ReplicaSets, unless you require custom update orchestration or don't require updates at all.
+
+- This actually means that you may never need to manipulate ReplicaSet objects: use a Deployment instead, and define your application in the spec section.
