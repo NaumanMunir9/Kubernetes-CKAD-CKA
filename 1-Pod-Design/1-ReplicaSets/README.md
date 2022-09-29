@@ -39,7 +39,13 @@
 
 kubectl apply -f rs-1.yaml
 
+# get pods
 kubectl get pods
+kubectl get po
+
+# get replicasets
+kubectl get replicasets.apps
+kubectl get replicasets
 kubectl get rs
 
 # we can also invoke kube-apiserver thought the below command:
