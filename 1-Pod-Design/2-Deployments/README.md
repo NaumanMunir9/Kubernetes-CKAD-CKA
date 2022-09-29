@@ -23,3 +23,24 @@
 - [Use the status of the Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#deployment-status) as an indicator that a rollout has stuck.
 
 - [Clean up older ReplicaSets](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#clean-up-policy) that you don't need anymore.
+
+```shell
+# Create the Deployment by running the following command:
+k apply -f deployment-1.yaml
+
+# Run kubectl get deployments to check if the Deployment was created.
+k get deployments
+
+# Run the following to check if the Deployment, ReplicaSet, Pods were created.
+k get all
+
+# View the rollout history of a deployment
+kubectl rollout history deployment/abc
+
+# View the details of daemonset revision 3
+kubectl rollout history daemonset/abc --revision=3
+
+# Usage:
+kubectl rollout history (TYPE NAME | TYPE/NAME) [flags] [options]
+
+```
